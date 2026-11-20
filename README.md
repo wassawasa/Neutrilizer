@@ -15,7 +15,7 @@ DAW の楽器トラックに挿して、ノート・歌詞・ピッチ・タイ�
 ## 必要なもの
 
 - Windows 10 / 11（64bit）。Windows 10 では [Microsoft Edge WebView2 ランタイム](https://developer.microsoft.com/microsoft-edge/webview2/) が必要です
-- [NEUTRINO](https://studio-neutrino.com/)（標準版 Tau v3.2 以降、または調声支援ツール同梱版）と歌声ライブラリ
+- [NEUTRINO](https://studio-neutrino.com/) 標準版（Tau v3.2 以降）と歌声ライブラリ
 - VST3 に対応した DAW（Reaper で動作を確認しています）
 
 ## インストール
@@ -23,7 +23,7 @@ DAW の楽器トラックに挿して、ノート・歌詞・ピッチ・タイ�
 1. DAW を終了し、zip を展開します
 2. 中の `Neutrilizer.vst3` フォルダを、中身ごと `C:\Program Files\Common Files\VST3` にコピーします（管理者の許可を求められます）
 3. DAW でプラグインを再スキャンし、楽器トラックに **Neutrilizer** を挿します
-4. 初回はプラグインの設定画面で、NEUTRINO のフォルダを指定します。調声支援ツール同梱版のフォルダを指定すると、常駐サーバーで速く歌声を作ります
+4. 初回はプラグインの設定画面で、NEUTRINO 標準版のフォルダ（`bin\neutrino.exe` があるフォルダ）を指定します
 
 `Neutrilizer.vst3` の中には、歌声を作るエンジンも入っています。フォルダの中身は分けずにコピーしてください。
 
@@ -39,7 +39,7 @@ DAW の楽器トラックに挿して、ノート・歌詞・ピッチ・タイ�
 - 音素タイミングの編集、ブレス・語頭ブレス
 - Reaper では、テンポと拍子を Reaper から受け取り、ノートと歌詞を MIDI アイテムとして同期
 - 1 つのトラックに複数のボーカル（ボーカルごとのミュート・ソロ・音量）
-- 調声支援ツール同梱版の NEUTRINO なら、常駐サーバーで速く歌声を作る
+- 内蔵の高速エンジン: NEUTRINO 標準版の ONNX Runtime と歌声ライブラリを読み込んだまま使い、フレーズごとの待ち時間なしで歌声を作る（計算は標準版と同じ）
 
 ## 利用上の注意
 
